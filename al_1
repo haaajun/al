@@ -1,0 +1,160 @@
+//#include<stdio.h>
+//
+//int main(){
+//	char c;
+//	int i;
+//	long long l;
+//	double d;
+//	char s[101];
+//	
+//	scanf("%c",&c);
+//	scanf("%d",&i);
+//	scanf("%lld",&l);
+//	scanf("%lf",&d);
+//	scanf("%s",&s);
+//	
+//	printf("\n%c\n",c);
+//	printf("%d\n",i);
+//	printf("%lld\n",l);
+//	printf("%lf\n",d);
+//	printf("%s",s);
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//	int a;
+//	int sum = 0;
+//	scanf("%d",&a);
+//	sum += a / 1000;
+//	sum += a / 100 % 10;
+//	sum += a / 10 % 10;
+//	sum += a % 10;
+//	
+//	printf("%d",sum);
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//	
+//	int h;
+//	int m;
+//	int s;
+//	int time;
+//	
+//	scanf("%d",&h);
+//	scanf("%d",&m);
+//	scanf("%d",&s);
+//	scanf("%d",&time);
+//	
+//	h -= time / 3600;
+//	m -= time % 3600 / 60;
+//	s -= time % 3600 % 60;
+//	
+//	if(m < 0){
+//		h--;
+//		m += 60;
+//	}
+//	
+//	if(s < 0){
+//		m--;
+//		s += 60;
+//	}
+//	
+//	printf("%d %d %d",h,m,s);
+//}
+
+//#include <stdio.h>
+//
+//int main(){
+//	int n;
+//	int m;
+//	int i;
+//	
+//	scanf("%d",&n);
+//	scanf("%d",&m);
+//	scanf("%d",&i);
+//	
+//	if(n / m == (i-1) / m){
+//		printf("0");
+//	}
+//	else if(i % m == 0){
+//		printf("%d",m);
+//	}
+//	else{
+//		printf("%d",i % m);
+//	
+//	}
+//	
+//	
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a[4];
+//	int b;
+//	
+//	scanf("%d",&a[0]);
+//	scanf("%d",&a[1]);
+//	scanf("%d",&a[2]);
+//	scanf("%d",&a[3]);
+//	scanf("%d",&a[4]);
+//	
+//	b = (a[0]*a[0] + a[1]*a[1] + a[2]*a[2] + a[3]*a[3] + a[4]*a[4]) % 10;
+//	printf("%d",b);
+//	
+//}
+
+#include <stdio.h>
+
+int main()
+{
+	int a[3];
+	int b[3];
+	int c[3];
+	
+	int cnt[3];
+	
+	scanf("%d %d %d %d",&a[0], &a[1], &a[2], &a[3]);
+	scanf("%d %d %d %d",&b[0], &b[1], &b[2], &b[3]);
+	scanf("%d %d %d %d",&c[0], &c[1], &c[2], &c[3]);
+	
+	for(int i = 0;i < 3;i++){
+		if(a[i] == 0){
+			cnt[0]++;
+		}
+	}
+	
+	for(int i = 0;i < 3;i++){
+		if(b[i] == 0){
+			cnt[1]++;
+		}
+	}
+	
+	for(int i = 0;i < 3;i++){
+		if(c[i] == 0){
+			cnt[2]++;
+		}
+	}
+	for(int j = 0; j<3; j++){
+		printf("%d\n", cnt[j]);
+		if(cnt[j] == 0){
+			printf("E");
+		}
+		if(cnt[j] == 1){
+			printf("A");
+		}
+		if(cnt[j] == 2){
+			printf("B");
+		}
+		if(cnt[j] == 3){
+			printf("C");
+		}
+		if(cnt[j] == 4){
+			printf("D");
+		}
+	}
+}
