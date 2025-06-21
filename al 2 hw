@@ -1,0 +1,42 @@
+//#include <stdio.h>
+//int main()
+//{
+//	int a[5];
+//	int b;
+//	int cnt= 0;
+//	
+//	scanf("%d",&b);
+//	scanf("%d %d %d %d %d",&a[0],&a[1],&a[2],&a[3],&a[4]);
+//	
+//	for(int i = 0;i<5;i++)
+//	{
+//		if(a[i] == b)
+//		{
+//			cnt++;
+//		}
+//	}
+//	printf("%d",cnt);
+//}
+
+#include <stdio.h>
+int main()
+{
+	int a[4];
+	int b[4];
+	int c = 0;
+	int max = 0;
+	
+	for(int i = 0;i < 4;i++)
+	{
+		
+		scanf("%d %d",&a[i],&b[i]);
+		c = c + b[i] - a[i];
+		if(c > max)
+		{
+			max = c;
+		}
+	}
+	
+	printf("%d",max);	
+	
+}
