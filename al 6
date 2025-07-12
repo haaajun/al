@@ -1,0 +1,149 @@
+//#include <stdio.h>
+//
+//int factorial(int n)
+//{
+//	if(n == 1)
+//	{
+//		return 1;
+//	}
+//	
+//	return n * factorial(n-1);
+//	
+//		
+//}
+//
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d",&n);
+//	printf("%d",factorial(n));
+//	return 0; 
+//
+//}
+
+
+
+
+//#include <stdio.h>
+//
+//int a[100];
+//
+//int teleport(int p,int t)
+//{
+//
+//	
+//	if(0 == t)
+//	{
+//		return p;
+//	}
+//	
+//	return teleport(a[p],t-1);
+//}
+//
+//int main()
+//{
+//	int n,p,t;
+//	scanf("%d %d %d",&n,&p,&t);
+//	
+//	
+//	
+//	for(int i = 1;i <= n;i++)
+//	{
+//		scanf("%d",&a[i]);
+//	}
+//	
+//	printf("%d",teleport(p,t));
+//}
+
+
+//#include <stdio.h>
+//
+//int one(int n)
+//{
+//	return (n-2) * (n+1) * n/2;
+//}
+//
+//int two(int n)
+//{
+//	return (n*n*n) - ((n-1)*(n-1)*(n-1));
+//}
+//
+//int three(int n)
+//{
+//	return((3*n*n*n) - (n*n) - (3*n));
+//}
+//
+//
+//int main()
+//{
+//	int n;
+//	int m;
+//	scanf("%d %d",&n,&m);
+//	if(m == 1)
+//	{
+//		printf("%d",one(n));
+//	}
+//	else if(m == 2)
+//	{
+//		printf("%d",two(n));
+//	}
+//	else{
+//		printf("%d",three(n));
+//	}
+//}
+
+
+//#include <stdio.h>
+//
+//int sum(int n)
+//{	
+//	if(n == 0)
+//	{
+//		return 0;
+//	}
+//	return n % 10 + sum(n/10);
+//}
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d",&n);
+//	printf("%d",sum(n));
+//	
+//}
+
+//#include <stdio.h>
+//
+//int collatz(int n)
+//{
+//	if(n == 1) return 0;
+//	if(n%2 == 0)
+//	{
+//		return 1 + collatz(n/2);
+//	}
+//	else{
+//		return 1 + collatz(n*3 +1);
+//	}
+//}
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d",&n);
+//	printf("%d",collatz(n));
+//}
+
+#include <stdio.h>
+
+int hanoi(int n,int from,int to)
+{
+	
+}
+
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	hanoi(n,1,3);
+}
