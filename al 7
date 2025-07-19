@@ -1,0 +1,142 @@
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str[101];
+//	scanf("%[^\n]", str);
+//	
+//	for(int i = 0; str[i]; i++)
+//	{
+//		if('A' <= str[i] && str[i] <= 'X')
+//		{
+//			str[i]+=32;
+//		}
+//	}
+//	
+//	printf("%s",str);
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str[101];
+//	scanf("%s",str);
+//	
+//	int cnt[26] = {0,};
+//	
+//	for(int i = 0;str[i];i++)
+//	{
+//		if('a' <= str[i] && str[i] <= 'z')
+//		{
+//			str[i] -= 32;
+//		}
+//		
+//		cnt[str[i] - 'A']++;
+//	}
+//	
+//	for(int i = 0;i < 26;i++)
+//	{
+//		printf("%d ",cnt[i]);
+//	}
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int n;
+//	char s[1001];
+//	
+//	scanf("%d",&n);
+//	scanf("%s",s);
+//	
+//	for(int i = 0;s[i];i++)
+//	{
+//		s[i] += n;
+//		if(s[i] > 'Z')
+//		{
+//			s[i] -= 26;
+//		}
+//		printf("%c",s[i]);
+//	}
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str[101];
+//	scanf("%s",str);
+//	int pos[26];
+//	for(int i = 0;i<26;i++)
+//	{
+//		pos[i] = -1;
+//	}
+//	
+//	for(int i = 0;str[i];i++)
+//	{
+//		if(pos[str[i] - 'a'] == -1)
+//		{
+//			pos[str[i] - 'a'] = i;
+//		}
+//	}
+//	
+//	for(int i = 0; i < 26; i++)
+//	{
+//		printf("%d ",pos[i]);
+//	}
+//	
+//	
+//	
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int l,d;
+//	char str[101];
+//	char new_str[101] = {0,};
+//	
+//	scanf("%d %d",&l,&d);
+//	scanf("%s",str);
+//	
+//
+//	new_str[0] = str[0];
+//	for(int i = 1;str[i];i++)
+//	{
+//		
+//		
+//		int sum = i + d;
+//		if(sum > l)
+//		{
+//			sum -= l;
+//		}
+//		if(sum != 0)
+//		{
+//			sum++;
+//		}
+//		
+//		new_str[i+d] = str[i];
+//	}
+//	
+//	printf("%s",new_str);
+//}
+
+#include <stdio.h>
+int main()
+{
+	int n;
+	char str[101];
+	char new_str[101];
+	
+	scanf("%d",&n);
+	scanf("%s",str);
+	scanf("%s",new_str);
+	
+	for(int i = 0;str[i];i++)
+	{
+		
+	}
+}
