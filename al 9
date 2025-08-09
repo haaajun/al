@@ -1,0 +1,106 @@
+//#include <stdio.h>
+//#include <string>
+//#include <iostream>
+//using namespace std;
+//
+//int main()
+//{
+//	
+//	
+//	string e;
+//	string f;
+//	
+//	cin >> e;
+//	cin >> f;
+//	
+//	
+//	
+//	for(int i = 0;i<13;i++)
+//	{
+//		if('A' <= e[i] && e[i] <= 'F')
+//		{
+//			e[i] = e[i] - 'A' + 10;
+//		}
+//		
+//		if('A' < f[i] && f[i] <= 'F')
+//		{
+//			f[i] = f[i] - 'A' + 10;
+//		}
+//	}
+//	
+//	const string a;
+//	const string b;
+//	
+//	
+//	
+//
+//	int c = stoi(a);
+//	int d = stoi(b);
+//	
+//	if(c > d)
+//	{
+//		printf("sir");
+//	}
+//	else {
+//		printf("kid");
+//	}
+//	
+//}
+
+//#include <stdio.h>
+//#include <iostream>
+//#include <string>
+//#include <string.h>
+//using namespace std;
+//
+//int main()
+//{
+//	string a,b,c,d;
+//	cin >> a;
+//	cin >> b;
+//	cin >> c;
+//	cin >> d;
+//	
+//	cout << stoi(a + b) + stoi(c + d);
+//}
+
+#include <stdio.h>
+#include <string>
+#include <iostream>
+using namespace std;
+int main()
+{	
+	int a,b;
+	string c[10];
+	string d[10];
+	
+	scanf("%d %d",&a,&b);
+	
+	for(int i = 0;i < a;i++)
+	{
+		cin >> c[i];
+	}
+	
+	for(int i = 0;i<b;i++)
+	{
+		cin >> d[i];
+	}
+	
+	int cnt = 0;
+	
+	for(int i = 0;i<b;i++)
+	{
+		for(int j = 0;j<a;j++)
+		{
+			if(d[i] == c[j])
+			{
+				cout << c[j];
+				cnt++;	
+			}
+		}
+			
+	}
+	
+	
+	
+}
