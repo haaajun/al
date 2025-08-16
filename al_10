@@ -1,0 +1,204 @@
+//#include <stdio.h>
+//#include <string>
+//#include <iostream>
+//using namespace std;
+//struct student {
+//	int id;
+//	string name;
+//	int c;
+//	int a; 
+//};
+//int main()
+//{
+//	student person[101];
+//	int n;
+//	scanf("%d",&n);
+//	for(int i = 0;i < n;i++)
+//	{
+//		scanf("%d",&person[i].id);
+//		cin >> person[i].name;
+//		scanf("%d",&person[i].c );
+//		scanf("%d",&person[i].a);
+//	}
+//	
+//	int m;
+//	scanf("%d",&m);
+//	string t[m];
+//	
+//	for(int i = 0;i < m;i++)
+//	{
+//		cin >> t[i];
+//	}
+//	
+//	int check = 0;
+//	
+//	for(int i = 0;i<m;i++)
+//	{
+//		check = 0;
+//		for(int j = 0;j<n;j++)
+//		{
+//			if(t[i] == person[j].name)
+//			{
+//				printf("%d %d %d",person[j].id,person[j].c ,person[j].a);
+//				check += 1;
+//			}
+//				
+//		}
+//		printf("\n");
+//		if(check ==0)
+//		{
+//			printf("-1");
+//		}
+//	}		
+//}
+
+//#include <stdio.h>
+//#include <string>
+//#include <iostream>
+//using namespace std;
+//
+//struct book {
+//	string a;
+//	int s;
+//	int g;
+//};
+//
+//int main()
+//{
+//	int n;
+//	book find[101];
+//	scanf("%d",&n);
+//	
+//	for(int i = 0;i<n;i++)
+//	{
+//		cin >> find[i].a;
+//		scanf("%d",&find[i].g ); 
+//		scanf("%d",&find[i].s);
+//	}
+//	
+//	string w;
+//	cin >> w;
+//	
+//	for(int i = 0;i < n;i++)
+//	{
+//		if(w == find[i].a )
+//		{
+//			printf("%d %d",find[i].g,find[i].s );
+//		}
+//	}
+//	
+//}
+
+//#include <stdio.h>
+//#include <utility>
+//using namespace std;
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d",&n);
+//	
+//	pair<int,int> p[101];
+//	
+//	for(int i = 0;i < n;i++)
+//	{
+//		int t,a;
+//		scanf("%d %d",&t,&a);
+//		p[i] = make_pair(t,a);
+//	}
+//	
+//	int ans;
+//	pair<int,int> best;
+//	best = make_pair(0,0);
+//	for(int i = 0;i<n;i++)
+//	{
+//		if(best < p[i])
+//		{
+//			best = p[i];
+//			ans = i+1;
+//		}
+//	}
+//	printf("%d",ans);
+//}
+
+//#include <stdio.h>
+//#include <utility>
+//using namespace std;
+//
+//int main()
+//{
+//	int n,m;
+//	scanf("%d %d",&n,&m);
+//	
+//	pair <int,int> p[11][11];
+//	
+//	
+//	for(int i = 0;i < n;i++)
+//	{
+//		for(int j = 0;j <m;j++)
+//		{
+//			int s,h;
+//			scanf("%d %d",&s,&h);
+//			p[i][j] = make_pair(s,h);	
+//		}
+//		
+//	}
+//	
+//	int a[2];
+//	int b[2];
+//	
+//	scanf("%d %d",&a[0],&a[1]);
+//	scanf("%d %d",&b[0],&b[1]);
+//	
+//	p[a[0]][a[1]] = p[b[0]][b[1]];
+//	p[b[0]][b[1]] = p[a[0]][a[1]];
+//	
+//	for(int i = 0;i<n;i++)
+//	{
+//		for(int j = 0;j < m;j++)
+//		{
+//			printf("%d %d ",p[i][j].first,p[i][j].second);
+//		}
+//		printf("\n");
+//	}
+//	
+//}
+
+#include <stdio.h>
+#include <utility>
+using namespace std; 
+
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	pair <int,float> item[101];
+	for(int i = 0;i < n;i++)
+	{
+		int m;
+		float a;
+		scanf("%d %f",&m,&a);
+		item[i] = make_pair(m,a);
+	}
+	int x,y,z;
+	scanf("%d %d %d",&x,&y,&z);
+	item[x].first = y;
+	item[x].second = z;
+	
+	
+	int sum_m = 0;
+	float mul_a = 1;
+	
+	for(int i = 0;i < n;i++)
+	{
+		sum_m += item[i].first;
+		mul_a = mul_a * item[i].second;
+	}
+	
+	int power = 1;
+	power = sum_m * mul_a;
+	
+	printf("%d",power);
+}
+
+	
