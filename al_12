@@ -1,0 +1,177 @@
+//#include <stdio.h>
+//#include <algorithm>
+//using namespace std;
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d",&n);
+//	
+//	float h[n+1];
+//	float original_h[n+1];
+//	
+//	for(int i = 0;i < n;i++)
+//	{
+//		scanf("%f",&h[i]);
+//		original_h[i] = h[i];
+//	}
+//	
+//	sort(h,h+n);
+//	int cnt = 0;
+//	for(int i = 0;i < n;i++)
+//	{
+//		if(h[i] != original_h[i])
+//		{
+//			cnt++;
+//		}
+//	}
+//	
+//	printf("%d",cnt);
+//	
+//	
+//}
+
+
+//#include <stdio.h>
+//#include <utility>
+//#include <algorithm>
+//using namespace std;
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d",&n);
+//	pair<int,int> p[n+1];
+//	
+//	
+//	for(int i = 0;i < n;i++)
+//	{
+//		int a,b;
+//		scanf("%d %d",&a,&b);
+//		p[i] = make_pair(a,b);
+//	}
+//	
+//	sort(p,p+n);
+//	
+//	for(int i = 0;i < n;i++)
+//	{
+//		
+//		if(p[i].first != p[i-1].first)
+//		{
+//			printf("\n");
+//		}
+//		printf("%d ",p[i].second);
+//	}
+//	
+//}
+
+//#include <stdio.h>
+//#include <algorithm>
+//using namespace std;
+//
+//struct character {
+//	
+//	int level;
+//	int exp;
+//	int power;
+//};
+//
+//bool cmp(character left,character right)
+//{
+//	if(left.level > right.level)
+//	{
+//		return true;
+//	}
+//	else if(left.level < right.level)
+//	{
+//		return false;
+//	}
+//	else{
+//		if(left.exp > right.exp)
+//		{
+//			return true;
+//		}
+//		else if(left.exp < right.exp)
+//		{
+//			return false;
+//		}
+//		else{
+//			if(left.power > right.power)
+//			{
+//				return true;
+//			}
+//			else if(left.power < right.power)
+//			{
+//				return false;
+//			}
+//			else {
+//				return false;
+//			}
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d",&n);
+//	
+//	character p[n + 1];
+//	
+//	for(int i = 0;i < n;i++)
+//	{
+//		int a,b,c;
+//		scanf("%d %d %d",&a,&b,&c);
+//		
+//		character p[i] = {a,b,c};
+//	}
+//	
+//	sort(p[0],p[n-1],cmp);
+//	
+//	for(int i = 0;i < n; i++)
+//	{
+//		printf("%d %d %d",p[i].level,p[i].exp,p[i].power);
+//	}
+//	
+//	
+//	
+//	
+//	
+//}
+
+#include <stdio.h>
+#include <utility>
+#include <algorithm>
+using namespace std;
+
+bool cmp(int left,int right)
+{
+	return left > right;
+}
+
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	pair <int,int> p[101];
+	int p_power[101];
+
+	
+	for(int i = 0;i < n;i++)
+	{
+		int a,b;
+		scanf("%d %d",&a,&b);
+		
+		p[i] = make_pair(a,b);
+	}
+	
+	for(int i = 0;i < n;i++)
+	{
+		p_power[i] = (p[i].first * p[i].second * p[i].second ) / 2;
+	
+		
+	}
+	
+	sort(p_power[0],p_power[n - 1],cmp);
+	
+}
