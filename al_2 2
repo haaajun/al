@@ -1,0 +1,98 @@
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a[11];
+//	int b[11];
+//	
+//	for(int i = 0;i < 10;i++)
+//	{
+//		scanf("%d",&a[i]);
+//	}
+//	for(int i = 0;i < 10;i++)
+//	{
+//		scanf("%d",&b[i]);
+//	}
+//	
+//	int cnt_a = 0;
+//	int cnt_b = 0;
+//	
+//	for(int i = 0;i< 10;i++)
+//	{
+//		if(a[i] > b[i])
+//		{
+//			cnt_a++;
+//		}
+//		else if(a[i] < b[i])
+//		{
+//			cnt_b++;
+//		}
+//	}
+//	
+//	if(cnt_a > cnt_b)
+//	{
+//		printf("A");
+//	}
+//	else if(cnt_a < cnt_b)
+//	{
+//		printf("B"); 
+//	}
+//	else{
+//		printf("D");
+//	}
+//}
+
+//#include <stdio.h>
+//#include <stack>
+//using namespace std;
+//
+//int main()
+//{
+//	char a[101];
+//	scanf("%s",&a);
+//	
+//	stack <char> s;
+//	
+//	int cnt = 0;
+//	
+//	for(int i = 0;a[i];i++)
+//	{
+//		if(a[i] == '(')
+//		{
+//			s.push(a[i]);
+//		}
+//		else{
+//			if(a[i-1] == '(')
+//			{
+//				cnt += s.size();
+//				s.pop();
+//			}
+//			else {
+//				s.pop();
+//			}
+//		}
+//	}
+//	printf("%d",cnt - 1);
+//	
+//}
+
+#include <stdio.h>
+#include <stack>
+using namespace std;
+
+int main()
+{
+	int n;
+	int a[500001];
+	stack <pair<int,int>> s;
+	
+	scanf("%d",&n);
+	
+	for(int i = 0;i < n;i++)
+	{
+		scanf("%d",&a[i]);
+		s.push(a[i]);
+	}
+	
+
+}
